@@ -1,1 +1,27 @@
-<p>estudiante works!</p>
+<h2>Lista de Estudiantes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre Completo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Estudiantes of estudiantes">
+            <td>{{Estudiantes.id}}</td>
+            <td>{{Estudiantes.nombreCompleto}}</td>
+            <td>{{Estudiantes.nombre}}</td>
+            <td>{{Estudiantes.apellido}}</td>
+            <td>{{Estudiantes.email}}</td>
+            <td>
+                <button (click)="eliminarEstudiante(Estudiantes.id)">Eliminar</button>
+                <!-- Botones para editar, actualizae etc -->
+            </td>
+        </tr>
+    </tbody>
+</table>
